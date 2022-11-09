@@ -40,7 +40,7 @@ qcom,psyche {
 	qcom,taper-fcc;
 	qcom,use-bq-pump;
 	qcom,use-ext-gauge;
-	qcom,max-voltage-uv = <4480000>;
+	qcom,max-voltage-uv = <4490000>;//for fv
 	qcom,batt-id-kohm = <100>;
 	qcom,battery-type = "L10A_profile";
 };
