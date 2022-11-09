@@ -359,8 +359,8 @@ And public attribution of xiaomi platforms(like L3A and so and)
 		charger_name = "quaternary_chg";
 		/* bank <bit-idx> <flags: active-low> */
 		//irq-gpios = <&tlmm 55 0x2002>;
-		interrupt-parent = <&tlmm>;
-		interrupts = <64 0x2002>;
+		//interrupt-parent = <&tlmm>;
+		//interrupts = <64 0x2002>;
 
 		//interrupt-parent = <&tlmm>;
 		//interrupts = <55 0x2002>;
@@ -488,6 +488,8 @@ And public attribution of xiaomi platforms(like L3A and so and)
 	status = "disabled";
 };
 
+
+/*Security : To extend TA memory*/
 &reserved_memory {
 	removed_mem: removed_region@80b00000 {
 		reg = <0x0 0x80b00000 0x0 0x5700000>;
@@ -495,6 +497,7 @@ And public attribution of xiaomi platforms(like L3A and so and)
 };
 
 &soc {
+	/*Security : To extend TA memory*/
 	qcom_seecom {
 		compatible = "qcom,qseecom";
 		reg = <0x82400000 0x3E00000>;
@@ -1064,7 +1067,7 @@ And public attribution of xiaomi platforms(like L3A and so and)
 		irq-gpio = <&tlmm 129 0>;
 		vib_mode = < 0 >;   /*mode:   RAM mode->0; CONT mode -> 1*/
 		vib_f0_pre = < 1700 >;
-		vib_f0_cali_percen = < 7 >;
+		vib_f0_cali_percen = < 9 >;
 		vib_cont_drv_lev = < 38 >;
 		vib_cont_drv_lvl_ov = < 50 >;
 		vib_cont_td = < 0x009A >;
